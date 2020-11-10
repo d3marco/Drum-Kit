@@ -8,15 +8,15 @@ var buttonInnerHTML = this.innerHTML;
   switch (buttonInnerHTML) {
     case 'w':
     var audio = new Audio('sounds/crash.mp3')
-    audio.play();
+    crash.play();
       break
       case "a":
       var audio = new Audio('sounds/kick-bass.mp3')
-      audio.play();
+      kick.play();
         break;
         case "s":
         var audio = new Audio('sounds/snare.mp3')
-        audio.play();
+        snare.play();
           break;
           case "d":
           var audio = new Audio('sounds/tom-1.mp3')
@@ -44,6 +44,10 @@ var buttonInnerHTML = this.innerHTML;
 
 
 }
+
+document.addEventListener("keydown",function {
+  alert("Key was pressed!");
+});
 
 
 //var audio = new Audio('sounds/tom-1.mp3')
