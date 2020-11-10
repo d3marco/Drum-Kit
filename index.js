@@ -4,8 +4,24 @@ for (var i = 0; i < document.querySelectorAll(".drum").length; i++){
   document.querySelectorAll(".drum")[i].addEventListener("click", function (){
 
 var buttonInnerHTML = this.innerHTML;
+makeSound(buttonInnerHTML);
 
-  switch (buttonInnerHTML) {
+
+
+
+  });
+
+  document.addEventListener("keydown",function() {
+
+  makeSound(event.key);
+
+  }
+
+}
+
+function makeSound(key)
+{
+  switch (key) {
     case 'w':
     var audio = new Audio('sounds/crash.mp3')
     crash.play();
@@ -37,16 +53,9 @@ var buttonInnerHTML = this.innerHTML;
     default: none;
 
   }
-
-
-  });
-
-
-
 }
 
-document.addEventListener("keydown",function {
-  alert("Key was pressed!");
+
 });
 
 
